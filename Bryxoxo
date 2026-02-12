@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valentine?</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; display:flex; min-height:100vh; align-items:center; justify-content:center; margin:0; background:#fff5f7; }
+    .card { background:white; padding:28px; border-radius:18px; box-shadow:0 8px 30px rgba(0,0,0,.12); text-align:center; width:min(420px, 92vw); }
+    h1 { margin:0 0 14px; font-size:28px; }
+    p { margin:0 0 18px; opacity:.8; }
+    .btns { display:flex; gap:12px; justify-content:center; }
+    button { border:0; padding:12px 18px; border-radius:12px; font-size:16px; cursor:pointer; }
+    #yes { background:#22c55e; color:white; }
+    #no { background:#ef4444; color:white; }
+    .result { margin-top:16px; font-size:18px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Will you be my Valentine? 💘</h1>
+    <p>Choose one:</p>
+
+    <div class="btns">
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
+    </div>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("yes").addEventListener("click", () => {
+      document.getElementById("result").textContent = "Yay!! ❤️";
+    });
+
+    document.getElementById("no").addEventListener("click", () => {
+      document.getElementById("result").textContent = "Aww okay 😅";
+    });
+  </script>
+</body>
+</html>
